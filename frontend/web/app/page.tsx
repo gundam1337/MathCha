@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-
+import "../styles/globals.css";
+import Navigationbar from "@/components/NavBar/Navbar";
 
 export default function Home() {
   return (
-    <div>hello world </div>
+    <>
+      <Navigationbar></Navigationbar>
+      
+    </>
   );
 }
+
+// return <h1>hello world</h1>;

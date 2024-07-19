@@ -1,0 +1,35 @@
+/* Box sizing rules */
+/*  resetting (or more accurately – setting) the styles of all elements to a baseline value
+ so that you avoid cross-browser differences due to their built-in default style settings. */
+
+ @import url('https://cdn.jsdelivr.net/npm/computer-modern@0.1.2/cmu-serif.css');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}

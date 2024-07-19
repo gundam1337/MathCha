@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import '../styles/globals.css'
+import { NextUIProvider } from "@nextui-org/react";
 
 
 export const metadata: Metadata = {
@@ -12,12 +13,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NextUIProvider>
+          {children}
+        </NextUIProvider>
+      </body>
     </html>
-  );
+  )
 }
