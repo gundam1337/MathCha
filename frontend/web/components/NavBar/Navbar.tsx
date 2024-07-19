@@ -2,6 +2,7 @@ import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
 import {MathChaLogo} from "./MathChaLogo";
 
+//TODO : make the logo responsive
 export default function Navigationbar() {
   return (
     <Navbar>
@@ -10,10 +11,10 @@ export default function Navigationbar() {
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="#" color="foreground">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link}  href="#" variant="flat">
             Sign Up
           </Button>
         </NavbarItem>
