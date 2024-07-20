@@ -11,10 +11,10 @@ export default function Navigationbar() {
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#" color="foreground">Login</Link>
+          <Link href="#" color="foreground" size="lg">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link}  href="#" variant="flat">
+          <Button as={Link}  href="#"  size="lg" variant="bordered">
             Sign Up
           </Button>
         </NavbarItem>

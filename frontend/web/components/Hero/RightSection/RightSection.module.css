@@ -1,0 +1,20 @@
+
+/* LeftSection.module.css */
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+    position: relative; /* For absolute positioning of video */
+  }
+  
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 11; /* Place video behind other content */
+  }
+  
