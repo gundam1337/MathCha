@@ -4,6 +4,7 @@
   gap: 1.5rem;
   width: 100%; /* Default for very small screens */
 }
+
 .title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
@@ -34,27 +35,27 @@
 /* Tablets and small laptops */
 @media (min-width: 768px) {
   .leftSection {
-    width: 85%; /* Occupies 75% of the hero section */
+    width: 90%; /* Maintains 80% width */
   }
 }
 
 /* Desktops and large tablets */
 @media (min-width: 1024px) {
   .leftSection {
-    width: 80%; 
+    width: 50%; /* 50% width when hero is in row direction */
   }
 }
 
 /* Large desktops */
 @media (min-width: 1280px) {
   .leftSection {
-    width: 70%; /* Occupies 60% of the hero section */
+    width: 50%; /* Maintains 50% width */
   }
 }
 
 /* Extra large desktops */
 @media (min-width: 1536px) {
   .leftSection {
-    width: 50%; /* Occupies 50% of the hero section */
+    width: 50%; /* Maintains 50% width */
   }
 }

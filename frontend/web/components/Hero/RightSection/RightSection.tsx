@@ -1,20 +1,12 @@
-import styles from './RightSection.module.css';
+import styles from "./RightSection.module.css";
 
 const RightSection: React.FC = () => {
   return (
-    <div className={styles.leftSection}>
-      {/* <video 
-        className={styles.video}
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-      >
-        
-        <source src="../../../public/demo.mp4" type="video/mp4" />
+    <div className={styles.rightSection}>
+      <video autoPlay muted loop playsInline className={styles.video}>
+        <source src="/demo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video> */}
-      <h1>vide demo</h1>
+      </video>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 /* Base styles - applied to all screen sizes unless overridden */
 .hero {
   display: flex;
-  flex-direction: column-reverse;  /* Stack elements vertically, reversed order */
+  flex-direction: column-reverse;
   align-items: center;
   padding: 4rem 2.5rem;
   gap: 2rem;
@@ -10,16 +10,14 @@
 /* Small tablets and large phones (landscape) */
 @media (min-width: 640px) {
   .hero {
-    
-    padding: 4rem 4rem;  /* Slightly increased padding */
+    padding: 4rem 4rem;
   }
 }
 
 /* Tablets and small laptops */
 @media (min-width: 768px) {
   .hero {
-      /* Switch to horizontal layout */
-    padding: 4rem 6rem;  /* Further increased padding */
+    padding: 4rem 6rem;
   }
 } 
 
@@ -27,13 +25,13 @@
 @media (min-width: 1024px) {
   .hero {
     flex-direction: row;
-    padding: 4rem 8rem;  /* Even more padding for larger screens */
+    padding: 4rem 8rem;
   }
 }
 
 /* Large desktops */
 @media (min-width: 1280px) {
   .hero {
-    padding: 4rem 10rem;  /* Maximum padding for very large screens */
+    padding: 4rem 10rem;
   }
 }
