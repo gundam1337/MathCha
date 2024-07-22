@@ -1,0 +1,75 @@
+.subjectCards {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #ff0000; /* or any color you prefer */
+}
+
+.name {
+  font-family: 'Courier New', monospace;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+/* Mobile first approach */
+.subjectCards {
+  grid-template-columns: 1fr;
+}
+
+/* Small devices (landscape phones, 640px and up) */
+@media (min-width: 640px) {
+  .subjectCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets and small laptops */
+@media (min-width: 768px) {
+  .subjectCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktops and large tablets */
+@media (min-width: 1024px) {
+  .subjectCards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1280px) {
+  .subjectCards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

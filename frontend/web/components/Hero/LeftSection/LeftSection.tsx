@@ -2,6 +2,8 @@
 import styles from "./LeftSection.module.css";
 import { Button, Link } from "@nextui-org/react";
 
+
+//TODO make the Button at the center 
 const LeftSection: React.FC = () => {
   return (
     <div className={styles.leftSection}>

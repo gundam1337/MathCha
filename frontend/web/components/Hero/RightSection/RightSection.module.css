@@ -1,9 +1,21 @@
 
 .rightSection {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 45%; /* Default for very small screens */
+  width: 100%;
+  max-width: 600px; /* Adjust this value as needed */
+  margin: 0 auto; /* Centers the container if it's smaller than its parent */
+  background-color: white;
+  border-radius: 24px; /* Significant rounding of corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), /* Subtle outer shadow */
+              0 1px 8px rgba(0, 0, 0, 0.07); /* Sharper edge shadow */
+  overflow: hidden; /* Ensures content doesn't spill out of rounded corners */
+  padding: 16px; /* Add some internal padding */
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes bottom margin/whitespace */
+  border-radius: 16px; /* Slightly less rounded than the container */
 }
 
 /* Small tablets and large phones (landscape) */
