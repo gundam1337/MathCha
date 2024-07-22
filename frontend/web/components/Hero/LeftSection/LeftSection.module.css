@@ -1,52 +1,60 @@
-/* LeftSection.module.css */
 .leftSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%; /* Default for very small screens */
+}
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
+  color: #000000; /* Deep navy blue */
+}
+
+.highlight {
+  color: #00A0B0; /* Vibrant teal */
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  color: #000000; /* Dark gray instead of pure black */
+  margin: 0;
+}
+
+
+/* Small tablets and large phones (landscape) */
+@media (min-width: 640px) {
+  .leftSection {
+    width: 90%; /* Occupies 80% of the hero section */
   }
-  
-  .title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
+}
+
+/* Tablets and small laptops */
+@media (min-width: 768px) {
+  .leftSection {
+    width: 85%; /* Occupies 75% of the hero section */
   }
-  
-  .highlight {
-    color: #7c3aed; /* Adjust this color to match the purple in your design */
+}
+
+/* Desktops and large tablets */
+@media (min-width: 1024px) {
+  .leftSection {
+    width: 80%; 
   }
-  
-  .subtitle {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: #4b5563;
-    margin: 0;
+}
+
+/* Large desktops */
+@media (min-width: 1280px) {
+  .leftSection {
+    width: 70%; /* Occupies 60% of the hero section */
   }
-  
-  .getStartedButton {
-    background-color: #10b981;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: flex-start;
+}
+
+/* Extra large desktops */
+@media (min-width: 1536px) {
+  .leftSection {
+    width: 50%; /* Occupies 50% of the hero section */
   }
-  
-  .getStartedButton:hover {
-    background-color: #059669;
-  }
-  
-  @media (max-width: 768px) {
-    .title {
-      font-size: 2.5rem;
-    }
-  
-    .subtitle {
-      font-size: 1rem;
-    }
-  }
+}

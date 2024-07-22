@@ -1,5 +1,6 @@
 // LeftSection.tsx
-import styles from './LeftSection.module.css';
+import styles from "./LeftSection.module.css";
+import { Button, Link } from "@nextui-org/react";
 
 const LeftSection: React.FC = () => {
   return (
@@ -8,11 +9,21 @@ const LeftSection: React.FC = () => {
         Learn by <span className={styles.highlight}>doing</span>
       </h1>
       <p className={styles.subtitle}>
-        Guided interactive problem solving that's effective and fun. Master concepts in 15 minutes a day.
+        Guided interactive problem solving that&apos;s effective and fun. Master
+        concepts in 15 minutes a day.
       </p>
-      <button className={styles.getStartedButton}>
-        Get started
-      </button>
+      <Button
+        className="
+         w-[70%]
+         shadow-md hover:shadow-lg transition-shadow duration-300"
+        as={Link}
+        href="#"
+        size="lg"
+        radius="full"
+        color="success"
+      >
+        Sign Up
+      </Button>
     </div>
   );
 };

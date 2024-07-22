@@ -1,10 +1,11 @@
 
 /* LeftSection.module.css */
 .rightSection {
+    background-color: red;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    max-width: 100%;
+    max-width: 50%;
     position: relative; /* For absolute positioning of video */
   }
   

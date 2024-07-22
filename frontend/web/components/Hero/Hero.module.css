@@ -1,50 +1,39 @@
- .hero {
+/* Base styles - applied to all screen sizes unless overridden */
+.hero {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column-reverse;  /* Stack elements vertically, reversed order */
   align-items: center;
-  padding: 10rem;
+  padding: 4rem 2.5rem;
   gap: 2rem;
 }
 
-
-/* Small devices (640px and up) */
+/* Small tablets and large phones (landscape) */
 @media (min-width: 640px) {
   .hero {
-    padding: 1.5rem;
+    
+    padding: 4rem 4rem;  /* Slightly increased padding */
   }
 }
 
-/* Medium devices (768px and up) */
+/* Tablets and small laptops */
 @media (min-width: 768px) {
   .hero {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2rem;
+      /* Switch to horizontal layout */
+    padding: 4rem 6rem;  /* Further increased padding */
   }
+} 
 
-  .leftSection, .rightSection {
-    width: 48%; /* Allowing for some gap between sections */
-  }
-}
-
-/* Large devices (1024px and up) */
+/* Desktops and large tablets */
 @media (min-width: 1024px) {
   .hero {
-    padding: 3rem;
+    flex-direction: row;
+    padding: 4rem 8rem;  /* Even more padding for larger screens */
   }
 }
 
-/* Extra large devices (1280px and up) */
+/* Large desktops */
 @media (min-width: 1280px) {
   .hero {
-    padding: 4rem;
-  }
-}
-
-/* 2XL devices (1536px and up) */
-@media (min-width: 1536px) {
-  .hero {
-    padding: 5rem;
+    padding: 4rem 10rem;  /* Maximum padding for very large screens */
   }
 }
