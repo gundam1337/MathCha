@@ -1,0 +1,47 @@
+.conceptSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .description {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .description h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .videoPlaceholder {
+    flex: 1;
+    background-color: #f0f0f0;
+    min-height: 300px;
+  }
+  
+  .explanation {
+    flex: 1;
+  }
+  
+  .explanation h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+    
+    .videoPlaceholder,
+    .explanation {
+      width: 100%;
+    }
+  }
