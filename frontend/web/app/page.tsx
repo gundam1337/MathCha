@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <Navigationbar></Navigationbar>
       <Hero></Hero>
-       
       <ConceptSection></ConceptSection>
       <SubjectCards></SubjectCards> 
     </>

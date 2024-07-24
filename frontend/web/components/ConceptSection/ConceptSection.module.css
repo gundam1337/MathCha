@@ -1,47 +1,44 @@
+/* ConceptSection.module.css */
 .conceptSection {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .description {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .description h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-  
-  .videoPlaceholder {
-    flex: 1;
-    background-color: #f0f0f0;
-    min-height: 300px;
-  }
-  
-  .explanation {
-    flex: 1;
-  }
-  
-  .explanation h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-    }
-    
-    .videoPlaceholder,
-    .explanation {
-      width: 100%;
-    }
-  }
+  display: flex;
+  width: 80%;
+  padding-left: 2rem;
+}
+
+.stepperContainer {
+  width: 30%;
+  /* position: sticky; */
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.contentContainer {
+  width: 70%;
+  padding-left: 2rem;
+}
+
+.stepContent {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.explanation {
+  text-align: center;
+}
+

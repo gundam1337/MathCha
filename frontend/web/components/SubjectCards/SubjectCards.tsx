@@ -1,16 +1,13 @@
-import React from 'react';
-import styles from './subjectCards.module.css';
-import { FaLaptopCode, FaFlask } from 'react-icons/fa';
+import React from "react";
+import styles from "./subjectCards.module.css";
+import { FaLaptopCode, FaFlask } from "react-icons/fa";
 import { TbMathIntegralX } from "react-icons/tb";
-
-
-
 
 const SubjectCards: React.FC = () => {
   const subjects = [
-    { name: 'Math', Icon: TbMathIntegralX },
-    { name: 'Computer Science & Programming', Icon: FaLaptopCode },
-    { name: 'Science & Engineering', Icon: FaFlask },
+    { name: "Math", Icon: TbMathIntegralX },
+    { name: "Computer Science & Programming", Icon: FaLaptopCode },
+    { name: "Science & Engineering", Icon: FaFlask },
   ];
 
   return (
