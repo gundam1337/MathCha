@@ -15,53 +15,8 @@ import {
   Box,
   Flex,
 } from "@chakra-ui/react";
+import {Step1, Step2, Step3} from './Steps'
 
-const Step1 = () => (
-  <>
-    <div className={styles.content}>
-      <div className={styles.videoPlaceholder}></div>
-      <div className={styles.explanation}>
-        <h3>Effective, hands-on learning</h3>
-        <p>
-          Visual, interactive lessons make concepts feel intuitive — so even
-          
-        </p>
-      </div>
-    </div>
-  </>
-);
-
-const Step2 = () => (
-  <>
-    <div className={styles.content}>
-      <div className={styles.videoPlaceholder}></div>
-      <div className={styles.explanation}>
-        <h3>Effective, hands-on learning</h3>
-        <p>
-          Visual, interactive lessons make concepts feel intuitive — so even
-          complex ideas just click. Our real-time feedback and simple
-          explanations make learning efficient.
-        </p>
-      </div>
-    </div>
-  </>
-);
-
-const Step3 = () => (
-  <>
-    <div className={styles.content}>
-      <div className={styles.videoPlaceholder}></div>
-      <div className={styles.explanation}>
-        <h3>Effective, hands-on learning</h3>
-        <p>
-          Visual, interactive lessons make concepts feel intuitive — so even
-          complex ideas just click. Our real-time feedback and simple
-          explanations make learning efficient.
-        </p>
-      </div>
-    </div>
-  </>
-);
 
 const steps = [
   { title: "Step 1", description: "Learning", content: <Step1 /> },

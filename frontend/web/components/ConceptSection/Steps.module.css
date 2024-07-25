@@ -1,29 +1,3 @@
-.conceptSection {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.stepsContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.stepWrapper {
-  display: flex;
-  margin-bottom: 2rem;
-}
-
-.stepperSide {
-  width: 30%;
-  padding-right: 2rem;
-}
-
-.contentSide {
-  width: 70%;
-}
-/* 
 .content {
   display: flex;
   flex-direction: column;
@@ -48,4 +22,4 @@
 
 .stepContent.active {
   opacity: 1;
-} */
+}
