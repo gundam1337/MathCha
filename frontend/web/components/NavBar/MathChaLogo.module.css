@@ -1,0 +1,44 @@
+.logo {
+    width: 12rem; /* 128px */
+    height: auto;
+  }
+  
+  .logoText {
+    font-size: 3rem; /* 40px */
+  }
+  
+  @media (min-width: 640px) {
+    .logo {
+      width: 10rem; /* 160px */
+    }
+    .logoText {
+      font-size: 3rem; /* 48px */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .logo {
+      width: 12rem; /* 192px */
+    }
+    .logoText {
+      font-size: 3.5rem; /* 56px */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .logo {
+      width: 14rem; /* 224px */
+    }
+    .logoText {
+      font-size: 3.5rem; /* 64px */
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .logo {
+      width: 11rem; /* 256px */
+    }
+    .logoText {
+      font-size: 4.5rem; /* 72px */
+    }
+  }

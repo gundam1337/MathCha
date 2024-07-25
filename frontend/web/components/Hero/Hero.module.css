@@ -25,7 +25,7 @@
 @media (min-width: 1024px) {
   .hero {
     flex-direction: row;
-    padding: 1rem 8rem;
+    padding: 1rem 5rem;
   }
 }
 

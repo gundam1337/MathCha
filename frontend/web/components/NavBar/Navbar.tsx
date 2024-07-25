@@ -13,14 +13,14 @@ export default function Navigationbar() {
   return (
     <Navbar
       maxWidth="full"
-      className="px-6 py-4 sm:px-16 md:px-24 lg:px-32 xl:px-40"
+      className="px-2 py-2 sm:px-4 md:px-8 lg:px-16 xl:px-20"
     >
       <NavbarBrand>
         <MathChaLogo />
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#" color="foreground" size="lg">
+          <Link href="#" color="foreground" size="md">
             Login
           </Link>
         </NavbarItem>

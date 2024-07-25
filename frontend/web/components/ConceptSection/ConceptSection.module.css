@@ -1,28 +1,27 @@
-/* ConceptSection.module.css */
 .conceptSection {
-  display: flex;
-  width: 80%;
-  padding-left: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.stepperContainer {
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepWrapper {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.stepperSide {
   width: 30%;
-  /* position: sticky; */
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
+  padding-right: 2rem;
 }
 
-.contentContainer {
+.contentSide {
   width: 70%;
-  padding-left: 2rem;
-}
-
-.stepContent {
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .content {
@@ -42,3 +41,11 @@
   text-align: center;
 }
 
+.stepContent {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.stepContent.active {
+  opacity: 1;
+}
