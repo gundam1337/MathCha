@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import styles from "./Navbar.module.css";
 import {
   Navbar,
   NavbarBrand,
@@ -7,29 +9,54 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
-import { MathChaLogo } from "./MathChaLogo";
+import MathChaLogo from "@/components/MathChaLogo/MathChaLogo";
+import LoginModal from "../auth/LoginModal";
+import useScroll from "@/hooks/useScroll";
 
-export default function Navigationbar() {
+const NavBar: React.FC = () => {
+  const scrolled = useScroll(50);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const handleLoginClick = () => setIsLoginModalOpen(true);
+  const handleCloseLoginModal = () => setIsLoginModalOpen(false);
+
   return (
-    <Navbar
-      maxWidth="full"
-      className="px-2 py-2 sm:px-4 md:px-8 lg:px-16 xl:px-20"
-    >
+    <Navbar maxWidth="full" className={styles.navbar}>
       <NavbarBrand>
         <MathChaLogo />
       </NavbarBrand>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#" color="foreground" size="md">
+        {/* For larger screens */}
+        <NavbarItem className={styles.largeScreenItem}>
+          <Button onPress={handleLoginClick} size="lg" variant="bordered">
             Login
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} href="#" size="lg" variant="bordered">
-            Sign Up
           </Button>
         </NavbarItem>
+        {scrolled && (
+          <NavbarItem className={styles.largeScreenItem}>
+            <Button as={Link} href="#" size="lg" color="success">
+              Get Started
+            </Button>
+          </NavbarItem>
+        )}
+
+        {/* For smaller screens */}
+        <NavbarItem className={styles.smallScreenItem}>
+          {scrolled ? (
+            <Button as={Link} href="#" size="lg" variant="bordered">
+              Get Started
+            </Button>
+          ) : (
+            <Button onPress={handleLoginClick} size="lg" variant="bordered">
+              Login
+            </Button>
+          )}
+        </NavbarItem>
       </NavbarContent>
+
+      <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
     </Navbar>
   );
-}
+};
+
+export default NavBar;

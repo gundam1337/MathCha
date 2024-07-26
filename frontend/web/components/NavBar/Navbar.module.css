@@ -1,0 +1,46 @@
+/* components/NavBar/NavBar.module.css */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0.5rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 0.5rem 8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar {
+    padding: 0.5rem 10rem;
+  }
+}
+
+.largeScreenItem {
+  display: none;
+}
+
+.smallScreenItem {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .largeScreenItem {
+    display: flex;
+  }
+
+  .smallScreenItem {
+    display: none;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './MathChaLogo.module.css';
 
-export const MathChaLogo = () => (
+const MathChaLogo = () => (
   <svg 
     viewBox="178.276 79.102 293.979 80.285" 
     xmlns="http://www.w3.org/2000/svg" 
@@ -26,3 +26,5 @@ export const MathChaLogo = () => (
     </text>
   </svg>
 );
+
+export default MathChaLogo;

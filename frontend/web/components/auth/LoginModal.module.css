@@ -1,0 +1,67 @@
+.modalBase {
+  background: white;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modalBackdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modalBody {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoContainer {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.authButton {
+  width: 100%;
+  justify-content: flex-start;
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #e0e0e0 !important;
+  font-weight: normal !important;
+}
+
+.emailButton {
+  width: 100%;
+  background-color: #333 !important;
+  color: white !important;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.signupText {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.signupLink {
+  color: #0070f3;
+  text-decoration: underline;
+}
