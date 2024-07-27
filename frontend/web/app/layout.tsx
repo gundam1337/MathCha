@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <NextUIProvider>
-          <ChakraProvider>{children}</ChakraProvider>
+          <ChakraProvider>{children}</ChakraProvider> 
         </NextUIProvider>
       </body>
     </html>

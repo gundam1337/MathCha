@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
       <NavbarContent justify="end">
         {/* For larger screens */}
         <NavbarItem className={styles.largeScreenItem}>
-          <Button onPress={handleLoginClick} size="lg" variant="bordered">
+          <Button onClick={handleLoginClick} size="lg" variant="bordered">
             Login
           </Button>
         </NavbarItem>
@@ -43,11 +43,11 @@ const NavBar: React.FC = () => {
         {/* For smaller screens */}
         <NavbarItem className={styles.smallScreenItem}>
           {scrolled ? (
-            <Button as={Link} href="#" size="lg" variant="bordered">
+            <Button as={Link} href="#" size="lg" color="success">
               Get Started
             </Button>
           ) : (
-            <Button onPress={handleLoginClick} size="lg" variant="bordered">
+            <Button onClick={handleLoginClick} size="lg" variant="bordered">
               Login
             </Button>
           )}
