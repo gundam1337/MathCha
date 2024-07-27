@@ -16,10 +16,15 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
     setShowEmailLogin(true);
   };
 
+  const handleModalClose = () => {
+    setShowEmailLogin(false);
+    onClose();
+  }
+
   return (
     <Modal 
       isOpen={isOpen} 
-      onClose={onClose}
+      onClose={handleModalClose}
       classNames={{
         base: styles.modalBase,
         backdrop: styles.modalBackdrop,
