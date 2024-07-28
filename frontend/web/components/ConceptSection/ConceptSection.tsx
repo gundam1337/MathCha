@@ -13,7 +13,6 @@ import {
   StepDescription,
   StepSeparator,
   Box,
-  Flex,
 } from "@chakra-ui/react";
 import {Step1, Step2, Step3} from './Steps'
 
@@ -46,7 +45,7 @@ const ConceptSection = () => {
                     <StepTitle>{step.title}</StepTitle>
                     <StepDescription>{step.description}</StepDescription>
                   </Box>
-                  <StepSeparator />
+                  <StepSeparator className="black"/>
                 </Step>
               </Stepper>
             </div>

@@ -22,7 +22,7 @@ const LeftSection: React.FC = () => {
           padding: "1rem 2rem",
         }}
         as={Link}
-        href="#"
+        href="/get-started"
         size="lg"
         radius="full"
         color="success"
