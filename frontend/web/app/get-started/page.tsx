@@ -1,4 +1,10 @@
-const Questionnaire = () =>{
-    return (<h1>hello world</h1>)
-}
+import Quiz from "./Quiz";
+
+const Questionnaire = () => {
+  return (
+    <>
+      <Quiz />
+    </>
+  );
+};
 export default Questionnaire;

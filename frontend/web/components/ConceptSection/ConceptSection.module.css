@@ -23,7 +23,7 @@
 .contentSide {
   width: 70%;
 }
-/* 
+
 .content {
   display: flex;
   flex-direction: column;
@@ -48,4 +48,4 @@
 
 .stepContent.active {
   opacity: 1;
-} */
+}
