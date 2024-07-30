@@ -1,10 +1,15 @@
-// LeftSection.tsx
+"use client";
+import { useState } from "react";
 import styles from "./LeftSection.module.css";
 import { Button, Link } from "@nextui-org/react";
+import  QuizModal from '@/components/QuizModal/QuizModal'
 
-
-//TODO make the Button at the center 
 const LeftSection: React.FC = () => {
+
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
+  const handleCloseQuizModal = () => setIsQuizModalOpen(false);
+  const handleGetStartedClick = () => setIsQuizModalOpen(true);
+
   return (
     <div className={styles.leftSection}>
       <h1 className={styles.title}>
@@ -21,14 +26,17 @@ const LeftSection: React.FC = () => {
           fontWeight: 550,
           padding: "1rem 2rem",
         }}
-        as={Link}
-        href="/get-started"
+        // as={Link}
+        // href="/get-started"
+        onClick={handleGetStartedClick}
         size="lg"
         radius="full"
         color="success"
       >
         Get started
       </Button>
+
+      <QuizModal isOpen={isQuizModalOpen} onClose={handleCloseQuizModal} />
     </div>
   );
 };

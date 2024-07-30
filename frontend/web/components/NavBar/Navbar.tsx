@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
+import  QuizModal from '@/components/QuizModal/QuizModal'
 import {
   Navbar,
   NavbarBrand,
@@ -16,6 +17,10 @@ import useScroll from "@/hooks/useScroll";
 const NavBar: React.FC = () => {
   const scrolled = useScroll(50);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
+
+  const handleCloseQuizModal = () => setIsQuizModalOpen(false);
+  const handleGetStartedClick = () => setIsQuizModalOpen(true);
 
   const handleLoginClick = () => setIsLoginModalOpen(true);
   const handleCloseLoginModal = () => setIsLoginModalOpen(false);
@@ -34,7 +39,7 @@ const NavBar: React.FC = () => {
         </NavbarItem>
         {scrolled && (
           <NavbarItem className={styles.largeScreenItem}>
-            <Button as={Link} href="/get-started" size="lg" color="success">
+            <Button  onClick={handleGetStartedClick} size="lg" color="success">
               Get Started
             </Button>
           </NavbarItem>
@@ -43,7 +48,7 @@ const NavBar: React.FC = () => {
         {/* For smaller screens */}
         <NavbarItem className={styles.smallScreenItem}>
           {scrolled ? (
-            <Button as={Link} href="/get-started" size="lg" color="success">
+            <Button  onClick={handleGetStartedClick} size="lg" color="success">
               Get Started
             </Button>
           ) : (
@@ -55,6 +60,7 @@ const NavBar: React.FC = () => {
       </NavbarContent>
 
       <LoginModal isOpen={isLoginModalOpen} onClose={handleCloseLoginModal} />
+      <QuizModal isOpen={isQuizModalOpen} onClose={handleCloseQuizModal} />
     </Navbar>
   );
 };

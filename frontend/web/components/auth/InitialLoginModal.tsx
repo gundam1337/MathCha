@@ -6,6 +6,10 @@ import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
+
+//ADD login with the instagram 
+
+
 interface InitialLoginModalProps {
   onEmailLoginClick: () => void;
 }
