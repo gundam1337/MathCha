@@ -1,0 +1,85 @@
+/* ProfessorProfile.module.css */
+.card {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .avatarContainer {
+    margin-bottom: 1.5rem;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+  }
+  
+  .title {
+    display: inline-block;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 1rem;
+  }
+  
+  .info {
+    margin-bottom: 1rem;
+  }
+  
+  .info p {
+    margin: 0.25rem 0;
+  }
+  
+  .learnMore {
+    display: inline-block;
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .learnMore:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .avatarContainer {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  
+    .content {
+      text-align: left;
+    }
+  }

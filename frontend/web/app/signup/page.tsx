@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Input, Button, Link } from "@nextui-org/react";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -9,27 +9,15 @@ import styles from "./SignUpComponent.module.css";
 
 const SignUpComponent = () => {
   const [email, setEmail] = useState("");
-  const [isLargerThan768, setIsLargerThan768] = useState(false);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargerThan768(window.innerWidth >= 768);
-    };
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
 
   return (
     <div className={styles.pageContainer}>
       <div className={styles.container}>
         <div className={styles.flex}>
-          {isLargerThan768 && (
-            <div className={styles.leftColumn}>
-              <div className={styles.greyBox}></div>
-              <div className={styles.equationContainer}></div>
-            </div>
-          )}
+          <div className={styles.leftColumn}>
+            <div className={styles.greyBox}></div>
+            <div className={styles.equationContainer}></div>
+          </div>
           <div className={styles.rightColumn}>
             <h2 className={styles.title}>
               Create a free account to discover your personalized learning path
