@@ -26,8 +26,6 @@ const LeftSection: React.FC = () => {
           fontWeight: 550,
           padding: "1rem 2rem",
         }}
-        // as={Link}
-        // href="/get-started"
         onClick={handleGetStartedClick}
         size="lg"
         radius="full"

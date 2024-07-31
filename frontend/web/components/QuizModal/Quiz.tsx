@@ -1,11 +1,13 @@
-// Quiz.tsx
 "use client";
 import React, { useState } from "react";
 import styles from "./Quiz.module.css";
+import { Button } from "@nextui-org/react";
+import { FaBook, FaGraduationCap, FaBriefcase, FaChartLine } from "react-icons/fa";
+import { BsPencilSquare, BsPlayCircle, BsGlobe } from "react-icons/bs";
 
 interface Question {
   question: string;
-  choices: string[];
+  choices: { text: string; icon: React.ReactNode }[];
 }
 
 interface QuizData {
@@ -17,27 +19,27 @@ const quiz: QuizData = {
     {
       question: "What is your current level of comfort with mathematics?",
       choices: [
-        "Beginner - I struggle with basic concepts",
-        "Intermediate - I understand some concepts but need practice",
-        "Advanced - I'm comfortable with most topics but want to improve",
+        { text: "Beginner - I struggle with basic concepts", icon: <FaBook /> },
+        { text: "Intermediate - I understand some concepts but need practice", icon: <FaGraduationCap /> },
+        { text: "Advanced - I'm comfortable with most topics but want to improve", icon: <FaChartLine /> },
       ],
     },
     {
       question: "What is your primary goal for taking this course?",
       choices: [
-        "To improve my grades in school",
-        "To prepare for a specific exam",
-        "For personal interest and skill development",
-        "To apply mathematics in my job or career",
+        { text: "To improve my grades in school", icon: <FaGraduationCap /> },
+        { text: "To prepare for a specific exam", icon: <BsPencilSquare /> },
+        { text: "For personal interest and skill development", icon: <FaBook /> },
+        { text: "To apply mathematics in my job or career", icon: <FaBriefcase /> },
       ],
     },
     {
       question: "How do you prefer to learn new mathematical concepts?",
       choices: [
-        "Through visual aids and diagrams",
-        "By solving practice problems",
-        "By watching video explanations",
-        "Through real-world examples and applications",
+        { text: "Through visual aids and diagrams", icon: <FaChartLine /> },
+        { text: "By solving practice problems", icon: <BsPencilSquare /> },
+        { text: "By watching video explanations", icon: <BsPlayCircle /> },
+        { text: "Through real-world examples and applications", icon: <BsGlobe /> },
       ],
     },
   ],
@@ -74,7 +76,7 @@ const Quiz: React.FC = () => {
     <div className={styles.quizContainer}>
       {!showResult ? (
         <div>
-          <div>
+          <div className={styles.questionHeader}>
             <span className={styles.activeQuestionNo}>
               {addLeadingZero(activeQuestion + 1)}
             </span>
@@ -82,31 +84,31 @@ const Quiz: React.FC = () => {
               /{addLeadingZero(questions.length)}
             </span>
           </div>
-          <h2>{question}</h2>
+          <h2 className={styles.questionText}>{question}</h2>
           <ul className={styles.choicesList}>
             {choices.map((choice, index) => (
               <li
-                onClick={() => onAnswerSelected(choice)}
+                onClick={() => onAnswerSelected(choice.text)}
                 key={index}
-                className={
-                  selectedAnswers[activeQuestion] === choice
+                className={`${styles.choiceItem} ${
+                  selectedAnswers[activeQuestion] === choice.text
                     ? styles.selectedAnswer
                     : ""
-                }
+                }`}
               >
-                {choice}
+                <span className={styles.choiceIcon}>{choice.icon}</span>
+                {choice.text}
               </li>
             ))}
           </ul>
-          <div className={styles.flexRight}>
-            <button
-              onClick={onClickNext}
-              disabled={!selectedAnswers[activeQuestion]}
-              className={styles.nextButton}
-            >
-              {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
-            </button>
-          </div>
+          <Button
+            onClick={onClickNext}
+            isDisabled={!selectedAnswers[activeQuestion]}
+            color="success"
+            className={styles.nextButton}
+          >
+            {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
+          </Button>
         </div>
       ) : (
         <div className={styles.result}>

@@ -1,20 +1,34 @@
 .modalBase {
-    background: white;
-    border-radius: 16px;
-    max-width: 400px;
-    width: 90%;
-    margin: 0 auto;
-    z-index: 1000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .modalBackdrop {
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  background: white;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalBackdrop {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.modalContent {
+  padding: 0 !important;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 10px;
+}
+
+.quizWrapper {
+  padding: 0 20px 20px;
+}
