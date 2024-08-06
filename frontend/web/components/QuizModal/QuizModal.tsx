@@ -25,9 +25,7 @@ const QuizModal: React.FC<QuizModalProps> = ({ isOpen, onClose }) => {
           <div className={styles.logoContainer}>
             <MathChaLogo />
           </div>
-          
-            <Quiz />
-          
+          <Quiz />
         </ModalContent>
       </Modal>
     </>

@@ -1,9 +1,12 @@
 import React from 'react';
 import { Input, Button, Link } from "@nextui-org/react";
 import styles from './ForgotPassword.module.css';
+import NavBar from '@/components/NavBar/Navbar';
 
 const ForgotPasswordPage: React.FC = () => {
   return (
+    <>
+    <NavBar></NavBar>
     <div className={styles.container}>
       <h2 className={styles.heading}>Forgot your password?</h2>
       
@@ -25,6 +28,7 @@ const ForgotPasswordPage: React.FC = () => {
         contact us at <Link href="mailto:support@MathCha.org">support@MathCha.org</Link>.
       </p>
     </div>
+    </>
   );
 };
 

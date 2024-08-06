@@ -25,7 +25,7 @@ const ProfessorProfile: React.FC<ProfessorProfileProps> = ({
       <div className={styles.container}>
         <div className={styles.avatarContainer}>
           <Image
-            src={"/public/omar.jpg"}
+            src={"/omar.jpg"}
             alt={name}
             width={120}
             height={120}
@@ -34,12 +34,13 @@ const ProfessorProfile: React.FC<ProfessorProfileProps> = ({
         </div>
         <div className={styles.content}>
           <h2 className={styles.name}>{name}</h2>
-          <span className={styles.title}>{title}</span>
-          <p className={styles.quote}>"{quote}"</p>
+          <span className={styles.title}>{title}</span> 
+          <p className={styles.quote}>&quot;{quote}&quot;</p>
           <div className={styles.info}>
             <p><strong>Institution:</strong> {institution}</p>
             <p><strong>Alma mater:</strong> {almaMater}</p>
           </div>
+          {/* TODO add the protflio in the section  */}
           <a href="#" className={styles.learnMore}>
             Learn More About This Professor →
           </a>

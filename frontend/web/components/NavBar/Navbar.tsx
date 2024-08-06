@@ -7,7 +7,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
 } from "@nextui-org/react";
 import MathChaLogo from "@/components/MathChaLogo/MathChaLogo";
