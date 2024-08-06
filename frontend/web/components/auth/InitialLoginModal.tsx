@@ -55,7 +55,7 @@ const InitialLoginModal: React.FC<InitialLoginModalProps> = ({
       </div>
       <p className={styles.signupText}>
         New user?{" "}
-        <Link href="/signup" className={styles.signupLink}>
+        <Link href="/connect/signup" className={styles.signupLink}>
           Sign up
         </Link>
       </p>

@@ -37,7 +37,7 @@ const EmailLoginModal: React.FC<EmailLoginModalProps> = ({ onClose }) => {
           >
             Remember me
           </Checkbox>
-          <Link color="primary" href="/forgot-password" size="sm">
+          <Link color="primary" href="/connect/forgot-password" size="sm">
             Forgot password?
           </Link>
         </div>

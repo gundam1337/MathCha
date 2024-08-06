@@ -1,7 +1,7 @@
 // ProfessorProfile.tsx
-import React from 'react';
-import Image from 'next/image';
-import styles from './ProfessorProfile.module.css';
+import React from "react";
+import Image from "next/image";
+import styles from "./ProfessorProfile.module.css";
 
 interface ProfessorProfileProps {
   name: string;
@@ -27,20 +27,24 @@ const ProfessorProfile: React.FC<ProfessorProfileProps> = ({
           <Image
             src={"/omar.jpg"}
             alt={name}
-            width={120}
-            height={120}
+            width={400}
+            height={400}
             className={styles.avatar}
           />
         </div>
         <div className={styles.content}>
           <h2 className={styles.name}>{name}</h2>
-          <span className={styles.title}>{title}</span> 
+          <span className={styles.title}>{title}</span>
           <p className={styles.quote}>&quot;{quote}&quot;</p>
           <div className={styles.info}>
-            <p><strong>Institution:</strong> {institution}</p>
-            <p><strong>Alma mater:</strong> {almaMater}</p>
+            <p>
+              <strong>Institution:</strong> {institution}
+            </p>
+            <p>
+              <strong>Alma mater:</strong> {almaMater}
+            </p>
           </div>
-          {/* TODO add the protflio in the section  */}
+
           <a href="#" className={styles.learnMore}>
             Learn More About This Professor →
           </a>

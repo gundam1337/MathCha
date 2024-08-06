@@ -137,7 +137,7 @@
               We appreciate your input and will use this information to tailor our
               services to better meet your needs.
             </p>
-            <Link href="/signup" passHref>
+            <Link href="/connect/signup" passHref>
               <Button color="primary" className={styles.createAccountButton}>
                 Create Account
               </Button>
