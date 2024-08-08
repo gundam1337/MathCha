@@ -1,4 +1,6 @@
   "use client";
+
+  //TODO : replace the numbers with the Progress/next UI  
   import React, { useState } from "react";
   import Link from "next/link";
   import styles from "./Quiz.module.css";

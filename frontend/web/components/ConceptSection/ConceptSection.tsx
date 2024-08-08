@@ -33,7 +33,7 @@ const ConceptSection = () => {
           <Tab key={index} title={step.title} className={styles.tab}>
             <Card>
               <CardBody>
-                <h3>{step.title}: {step.description}</h3>
+                <h3 className="font-bold">{step.title}: {step.description}</h3>
                 {step.content}
               </CardBody>
               <CardFooter>
