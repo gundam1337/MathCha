@@ -8,6 +8,8 @@ export const Step1 = () => (
         <h3>Effective, hands-on learning</h3>
         <p>
           Visual, interactive lessons make concepts feel intuitive — so even
+          complex ideas just click. Our real-time feedback and simple
+          explanations make learning efficient.
         </p>
       </div>
     </div>

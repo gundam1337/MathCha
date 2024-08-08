@@ -1,21 +1,9 @@
 "use client";
 
 import styles from "./ConceptSection.module.css";
-import React, { useState } from "react";
-import {
-  Stepper,
-  Step,
-  StepIndicator,
-  StepStatus,
-  StepIcon,
-  StepNumber,
-  StepTitle,
-  StepDescription,
-  StepSeparator,
-  Box,
-} from "@chakra-ui/react";
-import {Step1, Step2, Step3} from './Steps'
-
+import { useState } from "react";
+import { Tabs, Tab, Card, CardBody, CardFooter, Button } from "@nextui-org/react";
+import { Step1, Step2, Step3 } from './Steps';
 
 const steps = [
   { title: "Step 1", description: "Learning", content: <Step1 /> },
@@ -26,41 +14,48 @@ const steps = [
 const ConceptSection = () => {
   const [activeStep, setActiveStep] = useState(0);
 
+  const handleNextStep = () => {
+    setActiveStep((prev) => Math.min(prev + 1, steps.length - 1));
+  };
+
+  const handlePrevStep = () => {
+    setActiveStep((prev) => Math.max(prev - 1, 0));
+  };
+
   return (
     <section className={styles.conceptSection}>
-      <div className={styles.stepsContainer}>
+      <Tabs 
+        selectedKey={activeStep.toString()} 
+        onSelectionChange={(key) => setActiveStep(Number(key))}
+        className={styles.tabsContainer}
+      >
         {steps.map((step, index) => (
-          <div key={index} className={styles.stepWrapper}>
-            <div className={styles.stepperSide}>
-              <Stepper index={activeStep} orientation="vertical" gap="0">
-                <Step onClick={() => setActiveStep(index)}>
-                  <StepIndicator>
-                    <StepStatus
-                      complete={<StepIcon />}
-                      incomplete={<StepNumber />}
-                      active={<StepNumber />}
-                    />
-                  </StepIndicator>
-                  <Box flexShrink="0">
-                    <StepTitle>{step.title}</StepTitle>
-                    <StepDescription>{step.description}</StepDescription>
-                  </Box>
-                  <StepSeparator className="black"/>
-                </Step>
-              </Stepper>
-            </div>
-            <div className={styles.contentSide}>
-              <div
-                className={`${styles.stepContent} ${
-                  activeStep === index ? styles.active : ""
-                }`}
-              >
+          <Tab key={index} title={step.title} className={styles.tab}>
+            <Card>
+              <CardBody>
+                <h3>{step.title}: {step.description}</h3>
                 {step.content}
-              </div>
-            </div>
-          </div>
+              </CardBody>
+              <CardFooter>
+                <div className={styles.buttonContainer}>
+                  <Button 
+                    onClick={handlePrevStep} 
+                    disabled={index === 0}
+                  >
+                    Previous
+                  </Button>
+                  <Button 
+                    onClick={handleNextStep} 
+                    disabled={index === steps.length - 1}
+                  >
+                    Next
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+          </Tab>
         ))}
-      </div>
+      </Tabs>
     </section>
   );
 };
