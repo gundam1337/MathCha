@@ -11,6 +11,7 @@
     FaBriefcase,
     FaChartLine,
   } from "react-icons/fa";
+  import {Progress} from "@nextui-org/progress";
   import { BsPencilSquare, BsPlayCircle, BsGlobe } from "react-icons/bs";
 
   interface Question {
@@ -72,10 +73,10 @@
     const [activeQuestion, setActiveQuestion] = useState<number>(0);
     const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
     const [showResult, setShowResult] = useState<boolean>(false);
-
+  
     const { questions } = quiz;
     const { question, choices } = questions[activeQuestion];
-
+  
     const onAnswerSelected = (answer: string) => {
       setSelectedAnswers((prev) => {
         const newAnswers = [...prev];
@@ -83,7 +84,7 @@
         return newAnswers;
       });
     };
-
+  
     const onClickNext = () => {
       if (activeQuestion !== questions.length - 1) {
         setActiveQuestion((prev) => prev + 1);
@@ -91,19 +92,20 @@
         setShowResult(true);
       }
     };
-
-    const addLeadingZero = (number: number): string =>
-      number > 9 ? `${number}` : `0${number}`;
-
+  
+    const progressPercentage = ((activeQuestion + 1) / questions.length) * 100;
+  
     return (
       <div className={styles.quizContainer}>
         {!showResult ? (
           <div>
             <div className={styles.questionHeader}>
-              <span className={styles.activeQuestionNo}>
-                {addLeadingZero(activeQuestion + 1)}/
-                {addLeadingZero(questions.length)}
-              </span>
+              <Progress
+                aria-label="Quiz progress"
+                value={progressPercentage}
+                className="max-w-md"
+              />
+             
             </div>
             <h2 className={styles.questionText}>{question}</h2>
             <ul className={styles.choicesList}>
@@ -149,5 +151,4 @@
       </div>
     );
   };
-
   export default Quiz;
