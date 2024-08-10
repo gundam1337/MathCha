@@ -1,0 +1,45 @@
+.content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.videoContainer {
+  flex: 1;
+  max-width: 50%;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.explanation {
+  flex: 1;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .videoContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .video {
+    max-height: none;
+    height: auto; 
+  }
+
+  .explanation {
+    width: 100%;
+  }
+}
