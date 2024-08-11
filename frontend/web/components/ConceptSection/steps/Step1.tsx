@@ -1,6 +1,4 @@
 
-//TODO: add a modal that display the course content 
-//FIXME : make the video in the vertical in the mobile screen  
 import step1Styles from "./Step1.module.css";
 
 export const Step1 = () => (
@@ -19,6 +17,8 @@ export const Step1 = () => (
             complex ideas just click. Our real-time feedback and simple
             explanations make learning efficient.
           </p>
+
+          <button>click to know more</button>
         </div>
       </div>
     </>

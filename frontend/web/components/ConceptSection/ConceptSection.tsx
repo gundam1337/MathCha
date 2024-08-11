@@ -3,9 +3,9 @@
 import styles from "./ConceptSection.module.css";
 import { useState } from "react";
 import { Tabs, Tab, Card, CardBody, CardFooter, Button } from "@nextui-org/react";
-import {Step1} from './Step1';
-import {Step2} from './Step2';
-import {Step3} from './Step3'
+import {Step1} from './steps/Step1';
+import {Step2} from './steps/Step2';
+import {Step3} from './steps/Step3'
 
 const steps = [
   { title: "Step 1", description: "Learning", content: <Step1 /> },
