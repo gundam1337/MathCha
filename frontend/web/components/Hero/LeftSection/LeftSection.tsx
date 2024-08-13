@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./LeftSection.module.css";
-import { Button, Link } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import  QuizModal from '@/components/QuizModal/QuizModal'
 
 const LeftSection: React.FC = () => {

@@ -1,7 +1,17 @@
+"use client";"use client";
 
+import React, { useState } from 'react';
+import { Button } from "@nextui-org/react";
 import step1Styles from "./Step1.module.css";
+import CourseModalContent from "../Modal/CourseModalContent";
 
-export const Step1 = () => (
+export const Step1: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  return (
     <>
       <div className={step1Styles.content}>
         <div className={step1Styles.videoContainer}>
@@ -18,8 +28,12 @@ export const Step1 = () => (
             explanations make learning efficient.
           </p>
 
-          <button>click to know more</button>
+          <Button color="primary" onClick={handleOpenModal}>
+            View Courses
+          </Button>
         </div>
       </div>
+      <CourseModalContent isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );
+};
