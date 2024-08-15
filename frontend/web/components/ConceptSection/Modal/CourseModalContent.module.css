@@ -1,0 +1,10 @@
+/* .fullScreenModal {
+    @media (max-width: 640px) {
+      width: 100vw !important;
+      height: 100vh !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      border-radius: 0 !important;
+    }
+  } */
