@@ -6,7 +6,6 @@ import ConceptSection from "@/components/ConceptSection/ConceptSection";
 import TitleOfConceptSection from "@/components/TitleOfConceptSection/TitleOfConceptSection";
 import ProfessorProfile from "@/components/ProfessorProfile/ProfessorProfile";
 
-//TODO : add the 
 
 export default function Home() {
   return (

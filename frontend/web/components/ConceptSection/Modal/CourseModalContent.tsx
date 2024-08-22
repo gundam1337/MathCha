@@ -1,5 +1,7 @@
 "use client";
 
+//FIXME : the modal in the mobil not in the center
+
 import React, { useState } from "react";
 import {
   Modal,
@@ -10,9 +12,11 @@ import {
   ModalBody,
   ModalFooter,
   Button,
+  Accordion,
+  AccordionItem,
 } from "@nextui-org/react";
-import styles from "./CourseModalContent.module.css";
-import CourseDetails from "../CourseDetails/CourseDetails";
+
+//import CourseDetails from "../CourseDetails/CourseDetails";
 
 interface CourseModalContentProps {
   isOpen: boolean;
@@ -83,8 +87,7 @@ const CourseModalContent: React.FC<CourseModalContentProps> = ({
     <Modal 
       isOpen={isOpen} 
       onClose={onClose}
-      className={styles.fullScreenModal}
-      size="full"
+      size="3xl"
     >
       <ModalContent>
         {!selectedCourse ? (
@@ -119,7 +122,31 @@ const CourseModalContent: React.FC<CourseModalContentProps> = ({
             </ModalFooter>
           </>
         ) : (
-          <CourseDetails course={selectedCourse} onBack={handleBack} />
+          <>
+            <ModalHeader>
+              <h2 className="text-lg font-bold">{selectedCourse.title}</h2>
+            </ModalHeader>
+            <ModalBody>
+              <p className="mb-4">{selectedCourse.details.fullDescription}</p>
+              <h3 className="text-md font-semibold mb-2">Course Topics</h3>
+              <Accordion>
+                {selectedCourse.details.topics.map((topic, index) => (
+                  <AccordionItem key={index} title={topic}>
+                    <p>Detailed information about {topic} goes here.</p>
+                    <p>You can add more specific content for each topic as needed.</p>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="primary" variant="light" onPress={handleBack}>
+                Back
+              </Button>
+              <Button color="danger" variant="light" onPress={onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </>
         )}
       </ModalContent>
     </Modal>
