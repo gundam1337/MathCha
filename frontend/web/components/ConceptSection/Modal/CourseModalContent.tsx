@@ -1,7 +1,5 @@
 "use client";
 
-//FIXME : the modal in the mobil not in the center
-
 import React, { useState } from "react";
 import {
   Modal,
@@ -16,14 +14,15 @@ import {
   AccordionItem,
 } from "@nextui-org/react";
 
-//import CourseDetails from "../CourseDetails/CourseDetails";
 
 interface CourseModalContentProps {
   isOpen: boolean;
   onClose: () => void;
+  selectedCourse: Course | null;
+  setSelectedCourse: React.Dispatch<React.SetStateAction<Course | null>>;
 }
 
-interface Course {
+export interface Course {
   id: string;
   title: string;
   description: string;
@@ -72,8 +71,10 @@ const courses: Course[] = [
 const CourseModalContent: React.FC<CourseModalContentProps> = ({
   isOpen,
   onClose,
+  selectedCourse,
+  setSelectedCourse,  
 }) => {
-  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  // const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
   const handleLearnMore = (course: Course) => {
     setSelectedCourse(course);

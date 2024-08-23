@@ -1,15 +1,22 @@
-"use client";"use client";
+"use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from "@nextui-org/react";
 import step1Styles from "./Step1.module.css";
-import CourseModalContent from "../Modal/CourseModalContent";
+import CourseModalContent, { Course } from "../Modal/CourseModalContent";
+
 
 export const Step1: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+
 
   const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedCourse(null);
+  };
 
   return (
     <>
@@ -33,7 +40,12 @@ export const Step1: React.FC = () => {
           </Button>
         </div>
       </div>
-      <CourseModalContent isOpen={isModalOpen} onClose={handleCloseModal} />
+      <CourseModalContent 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal}
+        selectedCourse={selectedCourse}
+        setSelectedCourse={setSelectedCourse}
+      />
     </>
   );
 };
