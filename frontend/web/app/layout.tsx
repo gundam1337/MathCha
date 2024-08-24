@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { NextUIProvider } from "@nextui-org/react";
-import { ChakraProvider } from "@chakra-ui/react";
+//import { ChakraProvider } from "@chakra-ui/react";
+import Navigationbar from '@/components/NavBar/Navbar'
 
 export const metadata: Metadata = {
   title: "MathCha",
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <NextUIProvider>
-          <ChakraProvider>{children}</ChakraProvider>
+          {/* <ChakraProvider>{children}</ChakraProvider> */}
+          <Navigationbar/>
+          {children}
         </NextUIProvider>
       </body>
     </html>

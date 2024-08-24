@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={styles.aboutSection}>
           <div className={styles.sectionTitle}>
             <FaUser className={styles.icon} />
-            <h2 className={styles.title}>About Me</h2>
+            <h2 className={styles.title}>Contact me</h2>
           </div>
           <div className={styles.contactInfo}>
             <FaPhone className={styles.icon} />
