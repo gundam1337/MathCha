@@ -5,6 +5,7 @@ import SubjectCards from "@/components/SubjectCards/SubjectCards";
 import ConceptSection from "@/components/ConceptSection/ConceptSection";
 import TitleOfConceptSection from "@/components/TitleOfConceptSection/TitleOfConceptSection";
 import ProfessorProfile from "@/components/ProfessorProfile/ProfessorProfile";
+import Footer from "@/components/Footer/Footer";
 
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
       <Hero></Hero>
       <TitleOfConceptSection></TitleOfConceptSection>
       <ConceptSection></ConceptSection>
+
+      {/* TODOD make the data in the compont  */}
       <ProfessorProfile
         name="Omar Derkaoui"
         title="PhD"
@@ -22,6 +25,7 @@ export default function Home() {
         almaMater="University of Michigan"
         imageUrl="/path/to/image.jpg"
       />
+      <Footer></Footer>
       {/* <SubjectCards></SubjectCards> */}
     </>
   );

@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { Button } from "@nextui-org/react";
 import step1Styles from "./Step1.module.css";
-import CourseModalContent, { Course } from "../Modal/CourseModalContent";
+import CourseModalContent from "../Modal/CourseModalContent";
+import { Course } from '../Modal/courseData';
 
 
 export const Step1: React.FC = () => {
