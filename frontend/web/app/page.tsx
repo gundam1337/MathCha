@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <Navigationbar></Navigationbar>
+      {/* <Navigationbar></Navigationbar> */}
       <Hero></Hero>
       <TitleOfConceptSection></TitleOfConceptSection>
       <ConceptSection></ConceptSection>
@@ -25,7 +25,7 @@ export default function Home() {
         almaMater="University of Michigan"
         imageUrl="/path/to/image.jpg"
       />
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
       {/* <SubjectCards></SubjectCards> */}
     </>
   );

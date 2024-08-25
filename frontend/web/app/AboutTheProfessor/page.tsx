@@ -1,43 +1,19 @@
 import React from 'react';
-import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
+import ProfessorProfile from './ProfessorProfile';
 
-async function getProfessorData() {
-  // Simulate an API call
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  return {
+export default function ProfessorPage() {
+  const professorData = {
     name: "Omar Derkaoui",
     title: "PhD",
     institution: "Stanford University",
-    almaMater: "University of Michigan",
-    quote: "Although the questions we're grappling with may have changed since the founding era, the examples of antiquity still challenge us to reflect on our own republic—its promises and its perils."
+    quote: "Although the questions we're grappling with may have changed since the founding era, the examples of antiquity still challenge us to reflect on our own republic—its promises and its perils.",
+    bio: "Dr. Omar Derkaoui is a distinguished professor at Stanford University, specializing in political science and history. With a Ph.D. from the University of Michigan, he has dedicated his career to exploring the intersections of ancient political thought and modern governance. His research and teachings draw parallels between historical precedents and contemporary challenges, offering unique insights into the evolution of democratic institutions. Dr. Derkaoui is renowned for his ability to make complex political theories accessible to students from diverse backgrounds, fostering critical thinking and civic engagement.",
+    imageUrl: "/omar.jpg"
   };
-}
-
-export default async function AboutProfessorPage() {
-  const professorData = await getProfessorData();
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Card className="max-w-[600px]">
-        <CardHeader className="flex gap-3">
-          <Image
-            alt="Professor's picture"
-            height={40}
-            radius="sm"
-            src="/path-to-professor-image.jpg"
-            width={40}
-          />
-          <div className="flex flex-col">
-            <p className="text-md">{professorData.name}</p>
-            <p className="text-small text-default-500">{professorData.title}</p>
-          </div>
-        </CardHeader>
-        <CardBody>
-          <p>{professorData.quote}</p>
-          <p className="mt-4">Institution: {professorData.institution}</p>
-          <p>Alma Mater: {professorData.almaMater}</p>
-        </CardBody>
-      </Card>
-    </div>
+    <main>
+      <ProfessorProfile {...professorData} />
+    </main>
   );
 }

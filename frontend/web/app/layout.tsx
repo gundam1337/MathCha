@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 //import { ChakraProvider } from "@chakra-ui/react";
 import Navigationbar from '@/components/NavBar/Navbar'
+import Footer from '@/components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: "MathCha",
@@ -24,6 +25,7 @@ export default function RootLayout({
           {/* <ChakraProvider>{children}</ChakraProvider> */}
           <Navigationbar/>
           {children}
+          <Footer/>
         </NextUIProvider>
       </body>
     </html>

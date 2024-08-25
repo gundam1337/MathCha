@@ -1,0 +1,63 @@
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .profileCard {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .imageContainer {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    margin-right: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .profileImage {
+    object-fit: cover;
+    object-position: center;
+    width: 90% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .contentContainer {
+    flex-grow: 1;
+    padding: 1.5rem;
+  }
+  
+  .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .institution {
+    margin-bottom: 1.5rem;
+  }
+  
+  .institutionLabel {
+    font-weight: bold;
+  }
+  
+  .bio {
+    line-height: 1.6;
+  }
