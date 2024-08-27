@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { NextUIProvider } from "@nextui-org/react";
-//import { ChakraProvider } from "@chakra-ui/react";
 import Navigationbar from '@/components/NavBar/Navbar'
 import Footer from '@/components/Footer/Footer'
 

@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./ProfessorProfile.module.css";
+import Link from 'next/link'
 
 interface ProfessorProfileProps {
   name: string;
@@ -45,9 +46,10 @@ const ProfessorProfile: React.FC<ProfessorProfileProps> = ({
             </p>
           </div>
 
-          <a href="#" className={styles.learnMore}>
-            Learn More About This Professor →
-          </a>
+         
+          <Link href="/AboutTheProfessor" className={styles.learnMore} >
+          Learn More About This Professor →
+          </Link>
         </div>
       </div>
     </div>
