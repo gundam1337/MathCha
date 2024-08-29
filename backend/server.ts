@@ -1,22 +1,22 @@
 import { Pool } from 'pg';
-//import config from './config/database';
-//import app from './app';
-//import logger from './utils/logger';
+import config from './config/database';
+import app from './app';
+import logger from './utils/logger';
 import http from 'http';
 import dotenv from 'dotenv';
 
 dotenv.config({ path: './config.env' });
 const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 
-// const pool = new Pool({
-//   connectionString: config.uri,
-// });
+const pool = new Pool({
+  connectionString: config.connectionString,
+});
 
 const startServer = async (): Promise<void> => {
   try {
     // Test database connection
-    //await pool.query('SELECT NOW()');
-    //logger.info('Connected to PostgreSQL');
+    await pool.query('SELECT NOW()');
+    logger.info('Connected to PostgreSQL');
 
     // Create HTTP server from the Express app
     const httpServer = http.createServer(app);
