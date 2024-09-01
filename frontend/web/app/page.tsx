@@ -11,12 +11,10 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      {/* <Navigationbar></Navigationbar> */}
+    <Navigationbar/>
       <Hero></Hero>
       <TitleOfConceptSection></TitleOfConceptSection>
       <ConceptSection></ConceptSection>
-
-      {/* TODOD make the data in the compont  */}
       <ProfessorProfile
         name="Omar Derkaoui"
         title="PhD"
@@ -25,8 +23,7 @@ export default function Home() {
         almaMater="University of Michigan"
         imageUrl="/path/to/image.jpg"
       />
-      {/* <Footer></Footer> */}
-      {/* <SubjectCards></SubjectCards> */}
+      <Footer/>
     </>
   );
 }

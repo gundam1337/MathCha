@@ -21,10 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <NextUIProvider>
-          {/* <ChakraProvider>{children}</ChakraProvider> */}
-          <Navigationbar/>
+          
           {children}
-          <Footer/>
         </NextUIProvider>
       </body>
     </html>
