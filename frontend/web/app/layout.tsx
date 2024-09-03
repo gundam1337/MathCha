@@ -23,7 +23,7 @@ export default function RootLayout({
         <NextUIProvider>
           
           {children}
-          <Footer/>
+          {/* <Footer/> */}
         </NextUIProvider>
       </body>
     </html>

@@ -1,4 +1,6 @@
 "use client";
+import Link from 'next/link';  
+
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import  QuizModal from '@/components/QuizModal/QuizModal'
@@ -27,7 +29,9 @@ const NavBar: React.FC = () => {
   return (
     <Navbar maxWidth="full" className={styles.navbar}>
       <NavbarBrand>
-        <MathChaLogo />
+      <Link href="/">
+          <MathChaLogo />
+        </Link>
       </NavbarBrand>
       <NavbarContent justify="end">
         {/* For larger screens */}
