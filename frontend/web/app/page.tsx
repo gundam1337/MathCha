@@ -23,7 +23,7 @@ export default function Home() {
         almaMater="University of Michigan"
         imageUrl="/path/to/image.jpg"
       />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

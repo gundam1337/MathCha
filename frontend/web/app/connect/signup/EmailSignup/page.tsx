@@ -1,43 +1,20 @@
-import React from "react";
-import { Input, Button } from "@nextui-org/react";
-import PasswordInput from '@/components/PasswordInput/PasswordInput'
-import styles from "./RegistrationForm.module.css";
+import RegistrationForm from "./RegistrationForm";
+import styles from "./SignUpComponent.module.css";
 
-const RegistrationForm = () => {
+export default function Signup() {
   return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>Register</h2>
-
-      <div className={styles.formGroup}>
-        <Input
-          isRequired
-          type="User name"
-          label="User name"
-          defaultValue="junior@nextui.org"
-          className="max-w-xs"
-        />
-
-        <PasswordInput/>
-
-        <div className={styles.passwordStrength}>
-          <div className={styles.passwordStrengthBar}></div>
-          <p className={styles.passwordStrengthText}>Password strength</p>
+    <div className={styles.pageContainer}>
+      <div className={styles.container}>
+        <div className={styles.flex}>
+          <div className={styles.leftColumn}>
+            <div className={styles.greyBox}></div>
+            <div className={styles.equationContainer}></div>
+          </div>
+          <div className={styles.rightColumn}>
+            <RegistrationForm></RegistrationForm>
+          </div>
         </div>
-
-        <Input
-          isRequired
-          type="email"
-          label="email"
-          defaultValue="junior@nextui.org"
-          className="max-w-xs"
-        />
-
-        <Button color="primary" fullWidth className={styles.button}>
-          REGISTER
-        </Button>
       </div>
     </div>
   );
-};
-
-export default RegistrationForm;
+}

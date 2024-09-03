@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { Input, Button, Link } from "@nextui-org/react";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -8,8 +5,6 @@ import { FcGoogle } from "react-icons/fc";
 import styles from "./SignUpComponent.module.css";
 
 const SignUpComponent = () => {
-  const [email, setEmail] = useState("");
-
   return (
     <div className={styles.pageContainer}>
       <div className={styles.container}>
@@ -44,13 +39,7 @@ const SignUpComponent = () => {
               </Button>
             </div>
             <p className={styles.orText}>OR</p>
-            <Input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className={styles.input}
-            />
+            <Input type="email" placeholder="Email" className={styles.input} />
             <Button className={styles.signUpButton}>Sign up</Button>
             <p className={styles.termsText}>
               By clicking above, I agree to MathCha{" "}
