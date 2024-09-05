@@ -3,11 +3,9 @@ import { ModalBody, Button } from "@nextui-org/react";
 import styles from "./LoginModal.module.css";
 import MathChaLogo from "@/components/MathChaLogo/MathChaLogo";
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
+// import { FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
-
-//TODO ADD login with the instagram
 
 interface InitialLoginModalProps {
   onEmailLoginClick: () => void;
@@ -32,18 +30,7 @@ const InitialLoginModal: React.FC<InitialLoginModalProps> = ({
         >
           Log in with Google
         </Button>
-        <Button
-          size="lg"
-          className={styles.authButton}
-          startContent={
-            <FaFacebook
-              className={styles.buttonIcon}
-              style={{ color: "#1877F2" }}
-            />
-          }
-        >
-          Log in with Facebook
-        </Button>
+
         <Button
           size="lg"
           className={styles.emailButton}

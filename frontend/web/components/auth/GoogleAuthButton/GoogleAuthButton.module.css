@@ -1,0 +1,14 @@
+.authButton {
+  width: 100%;
+  justify-content: flex-start;
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid #e0e0e0 !important;
+  font-weight: normal !important;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
