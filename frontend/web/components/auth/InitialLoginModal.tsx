@@ -2,8 +2,7 @@ import React from "react";
 import { ModalBody, Button } from "@nextui-org/react";
 import styles from "./LoginModal.module.css";
 import MathChaLogo from "@/components/MathChaLogo/MathChaLogo";
-import { FcGoogle } from "react-icons/fc";
-// import { FaFacebook } from "react-icons/fa";
+import GoogleAuthButton from "./GoogleAuthButton/GoogleAuthButton";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 
@@ -23,13 +22,7 @@ const InitialLoginModal: React.FC<InitialLoginModalProps> = ({
         The best way to learn math and computer science.
       </h2>
       <div className={styles.buttonContainer}>
-        <Button
-          size="lg"
-          className={styles.authButton}
-          startContent={<FcGoogle className={styles.buttonIcon} />}
-        >
-          Log in with Google
-        </Button>
+        <GoogleAuthButton />
 
         <Button
           size="lg"

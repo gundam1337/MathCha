@@ -12,3 +12,13 @@
   height: 20px;
   margin-right: 8px;
 }
+
+.errorButton {
+  border-color: #f31260 !important;
+}
+
+.errorMessage {
+  color: #f31260;
+  margin-top: 8px;
+  font-size: 14px;
+}
