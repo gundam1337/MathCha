@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import { Button } from "@nextui-org/react";
 import { FcGoogle } from 'react-icons/fc';
 import styles from './GoogleAuthButton.module.css'
+import { initiateGoogleAuth } from '@/utils/api/auth'
 import axios from 'axios';
 
 export default function GoogleAuthButton() {
@@ -15,10 +16,10 @@ export default function GoogleAuthButton() {
     setError(null);
 
     // Simulate a delay and then an error for testing purposes
-    setTimeout(() => {
-      setIsLoading(false);
-      setError('Failed to connect. Please try again.');
-    }, 5000);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    //   setError('Failed to connect. Please try again.');
+    // }, 5000);
 
     // Comment out the above setTimeout and uncomment the below code when ready for actual implementation
     /*
