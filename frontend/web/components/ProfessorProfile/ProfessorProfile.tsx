@@ -4,45 +4,38 @@ import Image from "next/image";
 import styles from "./ProfessorProfile.module.css";
 import Link from 'next/link'
 
-interface ProfessorProfileProps {
-  name: string;
-  title: string;
-  quote: string;
-  institution: string;
-  almaMater: string;
-  imageUrl: string;
-}
+const professorData = {
+  name: "Omar Derkaoui",
+  title: "PhD",
+  quote: "Although the questions we're grappling with may have changed since the founding era, the examples of antiquity still challenge us to reflect on our own republic—its promises and its perils.",
+  institution: "Stanford University",
+  almaMater: "University of Michigan",
+  imageUrl: "/path/to/image.jpg",
+};
 
-const ProfessorProfile: React.FC<ProfessorProfileProps> = ({
-  name,
-  title,
-  quote,
-  institution,
-  almaMater,
-  imageUrl,
-}) => {
+const ProfessorProfile: React.FC = () => {
   return (
     <div className={styles.card}>
       <div className={styles.container}>
         <div className={styles.avatarContainer}>
           <Image
             src={"/omar.jpg"}
-            alt={name}
+            alt={professorData.name}
             width={400}
             height={400}
             className={styles.avatar}
           />
         </div>
         <div className={styles.content}>
-          <h2 className={styles.name}>{name}</h2>
-          <span className={styles.title}>{title}</span>
-          <p className={styles.quote}>&quot;{quote}&quot;</p>
+          <h2 className={styles.name}>{professorData.name}</h2>
+          <span className={styles.title}>{professorData.title}</span>
+          <p className={styles.quote}>&quot;{professorData.quote}&quot;</p>
           <div className={styles.info}>
             <p>
-              <strong>Institution:</strong> {institution}
+              <strong>Institution:</strong> {professorData.institution}
             </p>
             <p>
-              <strong>Alma mater:</strong> {almaMater}
+              <strong>Alma mater:</strong> {professorData.almaMater}
             </p>
           </div>
 
