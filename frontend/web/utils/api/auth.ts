@@ -1,4 +1,7 @@
 import axios from 'axios';
+import https from 'https';
+
+// import https from 'https'; // NOTE this is not sure
 
 interface GoogleAuthResponse {
   authUrl: string;
@@ -21,8 +24,10 @@ const api = axios.create({
   })
 });
 
+
 export const initiateGoogleAuth = async (): Promise<{ authUrl: string | null; error: string | null }> => {
   try {
+    //The frontend triggers a request to my backend to initiate the OAuth process
     const response = await api.get<GoogleAuthResponse>('/api/auth/google');
     return { authUrl: response.data.authUrl, error: null };
   } catch (error) {

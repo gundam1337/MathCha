@@ -22,8 +22,8 @@ const InitialLoginModal: React.FC<InitialLoginModalProps> = ({
         The best way to learn math and computer science.
       </h2>
       <div className={styles.buttonContainer}>
+        
         <GoogleAuthButton />
-
         <Button
           size="lg"
           className={styles.emailButton}
