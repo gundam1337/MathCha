@@ -1,12 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
+import passport from '../../../config/passportConfig';  
 
- const googleAuth = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-  try {
-
-    res.status(200).json({ message: 'Login successful' });
-  } catch (error) {
-    next(error); // Pass errors to Express error handler
-  }
+// Initiate Google OAuth login
+export const googleAuth = (req: Request, res: Response, next: NextFunction) => {
+    passport.authenticate('google', { scope: ['profile', 'email'] })(req, res, next);
 };
+
 
 export default googleAuth;

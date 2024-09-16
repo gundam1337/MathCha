@@ -4,6 +4,7 @@ import path from 'path';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import passport from './config/passportConfig'
 
 import authRoutes from './routes/auth.routes';
 
@@ -17,6 +18,11 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Initialize Passport and restore authentication state, if any, from the session.
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // CORS configuration
 const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001'];
