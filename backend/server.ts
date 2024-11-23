@@ -8,6 +8,7 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import path from 'path';
 
+//fixme : the .Env was deleted !
 
 
 dotenv.config();
@@ -25,6 +26,8 @@ const startServer = async (): Promise<void> => {
 
     let server;
 
+    //not tested
+    
     if (useHttps) {
       const privateKey = fs.readFileSync(path.join(__dirname, 'ssl', 'server.key'), 'utf8');
       const certificate = fs.readFileSync(path.join(__dirname, 'ssl', 'server.cert'), 'utf8');
