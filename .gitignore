@@ -54,11 +54,10 @@ typings/
 
 # dotenv environment variables file
 backend/config.env
+backend/.env.development
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.development
+.env.production
 
 # Others
 .DS_Store
