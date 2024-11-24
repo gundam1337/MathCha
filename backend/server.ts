@@ -50,10 +50,10 @@ const startServer = async (): Promise<void> => {
       );
       server.close(() => {
         logger.info('Server closed');
-        // pool.end().then(() => {
-        //   logger.info('Database connection closed');
-        //   process.exit(0);
-        // });
+        pool.end().then(() => {
+          logger.info('Database connection closed');
+          process.exit(0);
+        });
       });
     };
 
