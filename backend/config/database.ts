@@ -1,7 +1,8 @@
 import * as dotenv from 'dotenv';
 
-// Load environment variables from .env.development
-dotenv.config({ path: '.env.development' });
+
+dotenv.config({ path: './.env.development' });
+
 
 interface Config {
     port: number;

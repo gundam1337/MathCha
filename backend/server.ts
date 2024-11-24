@@ -1,4 +1,4 @@
-//import { Pool } from 'pg';
+import { Pool } from 'pg';
 import config from './config/database';
 import app from './app';
 import logger from './utils/logger';
@@ -11,18 +11,18 @@ import path from 'path';
 //fixme : the .Env was deleted !
 
 
-{ path: '.env.development' }
+dotenv.config({ path: '.env.development' });
 const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 const useHttps = process.env.USE_HTTPS === 'true';
 
-// const pool = new Pool({
-//   connectionString: config.connectionString,
-// });
+const pool = new Pool({
+  connectionString: config.connectionString,
+});
 
 const startServer = async (): Promise<void> => {
   try {
-    //await pool.query('SELECT NOW()');
-    //logger.info('Connected to PostgreSQL');
+    await pool.query('SELECT NOW()');
+    logger.info('Connected to PostgreSQL');
 
     let server;
 
