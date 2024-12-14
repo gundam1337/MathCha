@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/gundam/Desktop/mathcha/content/media/videos/pythagor/480p15/partial_movie_files/PythagoreanTheorem/4266129954_2365732260_223132457.mp4'
-file 'file:/home/gundam/Desktop/mathcha/content/media/videos/pythagor/480p15/partial_movie_files/PythagoreanTheorem/1380718205_3213241947_798893165.mp4'
