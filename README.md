@@ -71,48 +71,7 @@ The Course Provider Front-End is a modern, responsive web application designed t
   </tr>
 </table>
 
----
 
-## 📸 Screenshots
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="images/w1.png" alt="Homepage Screenshot" width="400">
-    </td>
-    <td align="center">
-      <img src="images/m1.png" alt="Mobile Homepage Screenshot" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">Homepage</td>
-    <td align="center">Mobile Homepage</td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="images/w2.png" alt="Course Listings Screenshot" width="400">
-    </td>
-    <td align="center">
-      <img src="images/m2.png" alt="Mobile Course Listings Screenshot" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">Course Listings</td>
-    <td align="center">Mobile Course Listings</td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="images/w3.png" alt="Course Details Screenshot" width="400">
-    </td>
-    <td align="center">
-      <img src="images/m3.png" alt="Mobile Course Details Screenshot" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">Course Details</td>
-    <td align="center">Mobile Course Details</td>
-  </tr>
-</table>
 
 ---
 
