@@ -7,10 +7,26 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="https://your-image-link-1.com" alt="Desktop Screenshot" width="500">
+      <img src="images/w1.png" alt="Desktop Screenshot 1" width="500">
     </td>
     <td align="center">
-      <img src="https://your-image-link-2.com" alt="Mobile Screenshot" width="300">
+      <img src="images/m1.png" alt="Mobile Screenshot 1" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/w2.png" alt="Desktop Screenshot 2" width="500">
+    </td>
+    <td align="center">
+      <img src="images/m2.png" alt="Mobile Screenshot 2" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/w3.png" alt="Desktop Screenshot 3" width="500">
+    </td>
+    <td align="center">
+      <img src="images/m3.png" alt="Mobile Screenshot 3" width="300">
     </td>
   </tr>
 </table>
@@ -62,15 +78,39 @@ The Course Provider Front-End is a modern, responsive web application designed t
 <table>
   <tr>
     <td align="center">
-      <img src="https://your-image-link-3.com" alt="Homepage Screenshot" width="400">
+      <img src="images/w1.png" alt="Homepage Screenshot" width="400">
     </td>
     <td align="center">
-      <img src="https://your-image-link-4.com" alt="Course Details Screenshot" width="400">
+      <img src="images/m1.png" alt="Mobile Homepage Screenshot" width="400">
     </td>
   </tr>
   <tr>
     <td align="center">Homepage</td>
-    <td align="center">Course Details Page</td>
+    <td align="center">Mobile Homepage</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/w2.png" alt="Course Listings Screenshot" width="400">
+    </td>
+    <td align="center">
+      <img src="images/m2.png" alt="Mobile Course Listings Screenshot" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Course Listings</td>
+    <td align="center">Mobile Course Listings</td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/w3.png" alt="Course Details Screenshot" width="400">
+    </td>
+    <td align="center">
+      <img src="images/m3.png" alt="Mobile Course Details Screenshot" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Course Details</td>
+    <td align="center">Mobile Course Details</td>
   </tr>
 </table>
 
